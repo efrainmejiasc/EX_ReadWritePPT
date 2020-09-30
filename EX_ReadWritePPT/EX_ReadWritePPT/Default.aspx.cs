@@ -8,10 +8,19 @@ using System.Web.UI;
 
 public partial class _Default : Page
 {
+    private string pathPresentacion = "~/TemplatePPT/Plantilla1.pptx";
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Label2.Text = "Verifique el archivo: "  + System.Web.HttpContext.Current.Server.MapPath("~/TemplatePPT/Plantilla1.pptx");
+
+        EscribirUsandoOffice15();
+    }
+
+
+
+    private void EscribirUsandoOffice15()
+    {
+        Label2.Text = "Verifique el archivo: " + System.Web.HttpContext.Current.Server.MapPath(this.pathPresentacion);
 
         ReadWriteSlide write = new ReadWriteSlide();
         if (write.WriteOnSlide())

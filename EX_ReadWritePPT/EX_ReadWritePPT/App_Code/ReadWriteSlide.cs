@@ -49,7 +49,6 @@ public class ReadWriteSlide
             presentation.SaveAs(filePath, PpSaveAsFileType.ppSaveAsDefault, Microsoft.Office.Core.MsoTriState.msoTrue);
             presentation.Close();
             pptApplication.Quit();
-
             resultado = true;
         }
         catch (Exception ex)
