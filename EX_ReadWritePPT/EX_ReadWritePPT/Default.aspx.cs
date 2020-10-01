@@ -13,10 +13,15 @@ public partial class _Default : Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        EscribirUsandoOffice15();
+        //EscribirUsandoOffice15();
+        OpenXmlExample();
     }
 
-
+    private void OpenXmlExample()
+    {
+        OpenXmlDocumentFormat example = new OpenXmlDocumentFormat();
+        example.WriteOnSlide();
+    }
 
     private void EscribirUsandoOffice15()
     {
